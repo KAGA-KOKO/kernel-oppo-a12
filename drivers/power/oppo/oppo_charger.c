@@ -3452,7 +3452,7 @@ static int fb_notifier_callback(struct notifier_block *nb,
 		if (event == FB_EVENT_BLANK) {
 			blank = *(int *)evdata->data;
 			if (blank == FB_BLANK_UNBLANK) {
-				g_charger_chip->led_on = true;
+				g_charger_chip->led_on = false;
 				g_charger_chip->led_on_change = true;
 			} else if (blank == FB_BLANK_POWERDOWN) {
 				g_charger_chip->led_on = false;
@@ -3486,7 +3486,7 @@ void oppo_chg_set_led_status(bool val)
 	if (!g_charger_chip) {
 		return;
 	} else {
-		g_charger_chip->led_on = val;
+		g_charger_chip->led_on = false;
 		g_charger_chip->led_on_change = true;
 	}
 }
@@ -4721,7 +4721,7 @@ static void oppo_chg_update_ui_soc(struct oppo_chg_chip *chip)
 				chip->ui_soc, chip->soc, soc_down_limit, soc_up_limit);
 		}
 	} else {
-		chip->prop_status = POWER_SUPPLY_STATUS_NOT_CHARGING;
+		chip->prop_status = POWER_SUPPLY_STATUS_DISCHARGING;
 		soc_up_count = 0;
 		if (chip->soc <= chip->ui_soc || vbatt_too_low) {
 			if (soc_down_count > soc_down_limit) {
