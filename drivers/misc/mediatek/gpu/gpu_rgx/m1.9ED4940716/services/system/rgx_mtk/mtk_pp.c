@@ -494,7 +494,7 @@ void MTKPP_LOGTIME(MTKPP_ID id, const char *str)
 		_MTKPP_DEBUG_LOG("[not init] %s", str);
 }
 
-void MTKPP_TriggerAEE(void)
+void MTKPP_TriggerAEE(int bug_on)
 {
 #if defined(ENABLE_AEE_WHEN_LOCKUP)
 	if (g_init_done)
