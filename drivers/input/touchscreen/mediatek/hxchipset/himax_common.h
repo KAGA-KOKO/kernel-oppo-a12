@@ -263,6 +263,36 @@ enum cell_type {
 	CHIP_IS_ON_CELL,
 	CHIP_IS_IN_CELL
 };
+
+#if defined(HX_SMART_WAKEUP)
+#define HX_KEY_DOUBLE_CLICK		KEY_WAKEUP
+#define HX_KEY_UP							KEY_UP
+#define HX_KEY_DOWN						KEY_DOWN
+#define HX_KEY_LEFT						KEY_LEFT
+#define HX_KEY_RIGHT					KEY_RIGHT
+#define HX_KEY_C							KEY_C
+#define HX_KEY_Z							KEY_Z
+#define HX_KEY_M							KEY_M
+#define HX_KEY_O							KEY_O
+#define HX_KEY_S							KEY_S
+#define HX_KEY_V							KEY_V
+#define HX_KEY_W							KEY_W
+#define HX_KEY_E							KEY_E
+#define HX_KEY_LC_M						263
+#define HX_KEY_AT							264
+#define HX_KEY_RESERVE				265
+#define HX_KEY_FINGER_GEST		266
+#define HX_KEY_V_DOWN					267
+#define HX_KEY_V_LEFT					268
+#define HX_KEY_V_RIGHT				269
+#define HX_KEY_F_RIGHT				270
+#define HX_KEY_F_LEFT					271
+#define HX_KEY_DF_UP					272
+#define HX_KEY_DF_DOWN				273
+#define HX_KEY_DF_LEFT				274
+#define HX_KEY_DF_RIGHT				275
+#endif
+
 #if defined(HX_FIX_TOUCH_INFO)
 enum fix_touch_info {
 	FIX_HX_RX_NUM = 32,

@@ -52,7 +52,8 @@
 #elif CONFIG_OPPO_FINGERPRINT_PLATFORM == 855 || CONFIG_OPPO_FINGERPRINT_PLATFORM == 6125 || CONFIG_OPPO_FINGERPRINT_PLATFORM == 7150
 #include <linux/uaccess.h>
 #else
-#include <soc/qcom/smem.h>
+#include <linux/soc/qcom/smem.h>
+#include <linux/uaccess.h>
 #endif
 #include <soc/oppo/oppo_project.h>
 #include <linux/slab.h>
@@ -620,4 +621,4 @@ static void __exit oppo_fp_common_exit(void)
 EXPORT_SYMBOL(opticalfp_irq_handler);
 #endif
 subsys_initcall(oppo_fp_common_init);
-module_exit(oppo_fp_common_exit)
+module_exit(oppo_fp_common_exit);
