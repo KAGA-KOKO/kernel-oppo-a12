@@ -5081,7 +5081,7 @@ PVRSRV_ERROR RGXUpdateHealthStatus(PVRSRV_DEVICE_NODE* psDevNode,
 
 						if (dump == 0)
 						{
-							MTKPP_TriggerAEE();
+							MTKPP_TriggerAEE(0);
 							dump = 1;
 						}
 					}
