@@ -52,7 +52,7 @@ config IOSCHED_SIO
 
 config IOSCHED_FIFO
         tristate "FIFO I/O scheduler"
-        default y
+        default n
 
 config CFQ_GROUP_IOSCHED
 	bool "CFQ Group Scheduling support"
