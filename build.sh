@@ -10,8 +10,8 @@ export LOCALVERSION="-P-OSS"
 # build kernel
 make -j$(nproc --all) O=out ARCH=arm64 oppo6765_19451_defconfig
 make -j16 ARCH=arm64 O=out \
-                      HOSTCC="ccache clang" \
-                      HOSTCXX="ccache clang++" \
-                      CC="ccache clang" \
+                      HOSTCC=clang \
+                      HOSTCXX=clang++ \
+                      CC=clang \
                       CROSS_COMPILE=aarch64-linux-gnu- \
                       CROSS_COMPILE_ARM32=arm-linux-gnueabi-
