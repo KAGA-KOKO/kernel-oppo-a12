@@ -1167,7 +1167,7 @@ silfp_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
     return retval;
 }
 
-int  silfp_touch_event_handler(struct fp_dev_touch_info* tp_info)
+int  touch_event_handler(struct fp_dev_touch_info* tp_info)
 {
     static uint8_t lasttouchmode = 0;
 
@@ -1196,7 +1196,7 @@ int  silfp_touch_event_handler(struct fp_dev_touch_info* tp_info)
     }
     return 0;
 }
-EXPORT_SYMBOL(silfp_touch_event_handler);
+EXPORT_SYMBOL(touch_event_handler);
 
 #ifdef CONFIG_COMPAT
 static long
