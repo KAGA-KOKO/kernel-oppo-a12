@@ -357,7 +357,7 @@ static void long_touch_handler(unsigned long arg)
 
 
 #if TRANSLATED_COMMAND
-void converter(char cmd, struct egistec_data *egistec)
+void translated_command_converter(char cmd, struct egistec_data *egistec)
 {
 	DEBUG_PRINT("Egis navigation driver, translated cmd: %d\n", cmd);
 
