@@ -562,7 +562,7 @@ void navi_operator(struct work_struct *work)
     struct navi_struct *command = container_of(work, struct navi_struct, workq);
 
 #if TRANSLATED_COMMAND
-	et520_translated_command_converter(command->cmd, command->egistec);
+	translated_command_converter(command->cmd, command->egistec);
 #else
 	straight_command_converter(command->cmd, command->egistec);
 
@@ -659,7 +659,7 @@ static int nav_input_thread(void *et_spi)
 			nav_input_sig || kthread_should_stop());
 		mutex_lock(&driver_mode_lock);
 		list_for_each_entry_safe(acmd, tempcmd, &cmd_list.list, list) {
-			et520_translated_command_converter(acmd->cmd, egistec);
+			translated_command_converter(acmd->cmd, egistec);
 			list_del(&acmd->list);
 			kfree(acmd);
 		}
