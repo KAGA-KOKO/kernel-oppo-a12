@@ -859,8 +859,8 @@ void mt_gpufreq_set_power_limit_by_pbm(unsigned int limited_power)
 
 	mutex_lock(&mt_gpufreq_power_lock);
 
-	//if (g_pbm_limited_ignore_state) {
-	if(1){
+	if (g_pbm_limited_ignore_state) {
+	//if(1){
 		gpufreq_pr_debug("@%s: ignore PBM Power limited\n", __func__);
 		mutex_unlock(&mt_gpufreq_power_lock);
 		return;
