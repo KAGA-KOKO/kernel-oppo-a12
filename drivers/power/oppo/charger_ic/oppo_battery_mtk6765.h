@@ -40,7 +40,7 @@
 struct charger_manager;
 #include "../drivers/power/supply/mediatek/charger/mtk_pe_intf.h"
 #include "../drivers/power/supply/mediatek/charger/mtk_pe20_intf.h"
-#include "../kernel-4.9/drivers/power/supply/mediatek/charger/mtk_pdc_intf.h"
+#include "../drivers/power/supply/mediatek/charger/mtk_pdc_intf.h"
 
 //====================================================================//
 /* mtk_pe40_intf begin */
