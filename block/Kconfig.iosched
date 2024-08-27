@@ -40,7 +40,7 @@ config CFQ_GROUP_IOSCHED
 	  Enable group IO scheduling in CFQ.
 
 config IOSCHED_SIO
-	tristate "Simple I/O scheduler"
+	tristate "SIO I/O scheduler"
 	default y
 	---help---
 	  The Simple I/O scheduler is an extremely simple scheduler,
