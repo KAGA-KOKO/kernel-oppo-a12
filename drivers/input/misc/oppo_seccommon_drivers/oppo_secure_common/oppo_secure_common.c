@@ -32,7 +32,7 @@
 #elif CONFIG_OPPO_BSP_SECCOM_PLATFORM == 855 || CONFIG_OPPO_BSP_SECCOM_PLATFORM == 6125 || CONFIG_OPPO_BSP_SECCOM_PLATFORM == 7150
 #include <linux/soc/qcom/smem.h>
 #else
-#include <linux/soc/qcom/smem.h>
+#include <soc/qcom/smem.h>
 #endif
 
 #include <linux/slab.h>
@@ -385,4 +385,4 @@ static void __exit oppo_secure_common_exit(void)
 }
 
 fs_initcall(oppo_secure_common_init);
-module_exit(oppo_secure_common_exit)
+module_exit(oppo_secure_common_exit);
