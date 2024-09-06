@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/arm64 4.9.117 Kernel Configuration
+# Linux/arm64 4.9.118 Kernel Configuration
 #
 CONFIG_ARM64=y
 CONFIG_64BIT=y
@@ -2147,8 +2147,8 @@ CONFIG_INPUT_UINPUT=y
 #
 # Fingerprint support
 #
-# CONFIG_MTK_FINGERPRINT_SUPPORT is not set
-# CONFIG_RMI4_CORE is not set
+CONFIG_MTK_FINGERPRINT_SUPPORT=y
+CONFIG_RMI4_CORE=y
 
 #
 # Hardware I/O ports
