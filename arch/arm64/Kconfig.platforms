@@ -606,4 +606,11 @@ config ARCH_ZYNQMP
 	help
 	  This enables support for Xilinx ZynqMP Family
 
+#Wuzhenzhen.Wu 2019/12/17,Add for ODM_WT_EDIT maco in kernel
+config ODM_WT_EDIT
+	bool "Enable Support for ODM WT Projects"
+	help
+	  This enables support for the ODM Wingtech projects. If you do not
+	  wish to build a kernel that runs on this chipset, say 'N' here.
+
 endmenu
