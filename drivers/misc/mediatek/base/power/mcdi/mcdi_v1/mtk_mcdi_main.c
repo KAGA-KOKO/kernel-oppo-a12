@@ -635,7 +635,7 @@ void mcdi_heart_beat_log_dump(void)
 	mcdi_buf_append(buf, ", system_idle_hint = %08x",
 						system_idle_hint_result_raw());
 
-	pr_debug("%s\n", get_mcdi_buf(buf));
+	pr_info("%s\n", get_mcdi_buf(buf));
 }
 
 int wfi_enter(int cpu)
@@ -895,7 +895,7 @@ subsys_initcall(mcdi_sysram_init);
 static int __init mcdi_init(void)
 {
 	/* Activate MCDI after SMP */
-	pr_debug("mcdi_init\n");
+	pr_info("mcdi_init\n");
 
 	/* Register CPU up/down callbacks */
 	mcdi_hotplug_cb_init();

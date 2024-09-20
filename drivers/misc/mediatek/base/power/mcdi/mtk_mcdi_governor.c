@@ -326,7 +326,7 @@ static bool remain_sleep_residency_allowable(unsigned int cpu_mask, int state)
 			mcdi_cluster.chk_res_fail++;
 			spin_unlock_irqrestore(&mcdi_cluster_spin_lock, flags);
 #if 0
-			pr_debug("[MCDI] cpu%d, entry:%llu curr:%llu next:%u, remain:%llu dur:%llu\n",
+			pr_info("[MCDI] cpu%d, entry:%llu curr:%llu next:%u, remain:%llu dur:%llu\n",
 				i,
 				sta->enter_time_us,
 				curr_time_us,
@@ -558,7 +558,7 @@ int mcdi_governor_select(int cpu, int cluster_idx)
 		if (val >= BOOT_TIME_LIMIT) {
 			boot_time_check = 1;
 			mcdi_ap_ready();
-			pr_debug("MCDI bootup check: PASS\n");
+			pr_info("MCDI bootup check: PASS\n");
 		} else {
 			return MCDI_STATE_WFI;
 		}
@@ -725,12 +725,12 @@ void mcdi_avail_cpu_cluster_update(void)
 	mcdi_avail_cpu_mask(cpu_mask);
 
 #if 0
-	pr_debug("online = %d, avail: mcusys = %d, cluster[0] = %d ",
+	pr_info("online = %d, avail: mcusys = %d, cluster[0] = %d ",
 		num_online_cpus(),
 		mcdi_gov_data.avail_cnt_mcusys,
 		mcdi_gov_data.avail_cnt_cluster[0],
 	);
-	pr_debug("[1] = %d, cpu_mask = %04x, cluster_mask = %04x\n",
+	pr_info("[1] = %d, cpu_mask = %04x, cluster_mask = %04x\n",
 		mcdi_gov_data.avail_cnt_cluster[1],
 		mcdi_gov_data.avail_cpu_mask,
 		mcdi_gov_data.avail_cluster_mask
@@ -780,7 +780,7 @@ void set_mcdi_s_state(int state)
 		return;
 	}
 
-	pr_debug("set_mcdi_s_state = %d\n", state);
+	pr_info("set_mcdi_s_state = %d\n", state);
 
 	spin_lock_irqsave(&mcdi_feature_stat_spin_lock, flags);
 
