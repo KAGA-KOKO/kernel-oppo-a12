@@ -259,8 +259,8 @@
 		charger_pump_support;
 		headset_pump_support;
 		esd_handle_support;
-		//spurious_fingerprint_support;
-		//lcd_trigger_fp_check;
+		spurious_fingerprint_support;
+		lcd_trigger_fp_check;
 		black_gesture_test_support;
 		noflash_support;
 		smart_gesture_support;
@@ -313,8 +313,8 @@
 			charger_pump_support;
 			headset_pump_support;
 			esd_handle_support;
-			//spurious_fingerprint_support;
-			//lcd_trigger_fp_check;
+			spurious_fingerprint_support;
+			lcd_trigger_fp_check;
 			black_gesture_test_support;
 			noflash_support;
 			smart_gesture_support;
